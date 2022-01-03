@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title> Database Management </title>
+        <link href="style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div class="blurr">
+            <p class="careerHeading">Database Management</p>
+            <div class="addcareersBack">
+                <button class="addcareers" id="viewAll">View All</button>
+            </div>
+            <div class="imageCard">
+                <img class="image" src="https://connect.talemetry.com/system/production/assets/267082/original/Cyber_NoCarrot.png">
+            </div>
+    
+            <button class="card1" onclick="toggle()">Add to Employee Table</button>
+    
+            <button class="card2" onclick="toggle_dep()">Add to Department Table</button>
+    
+            <button class="card3" onclick="toggle_loc()">Add to Location Table</button>
+            
+            <button class="card4" onclick="toggle_work()">Add to Works_on Table</button>
+                    
+            <button class="card5" onclick="toggle_proj()">Add to Project Table</button>
+            
+            <button class="card6" onclick="toggle_depen()">Add to Dependent Table</button>        
+        </div>
+        <div class="employeeTable">
+            <button class="closeButton" onclick="toggle()">close</button>
+            <form>
+                <label for="Fname">First Name: </label>
+                <input type="text" class="Fname" placeholder="First Name">
+                <br><br>
+                <label for="Mnit">Mint: </label>
+                <input type="text" class="Mnit" placeholder="Minit">
+                <br><br>
+                <label for="Lname">Last Name: </label>
+                <input type="text" class="Lname" placeholder="Last Name">
+                <br><br>
+                <label for="SSN">SSN: </label>
+                <input type="number" class="SSN" placeholder="SSN">
+                <br><br>
+                <label for="Bdate">DOB: </label>
+                <input type="date" class="Bdate">
+                <br><br>
+                <label for="addr">Address: </label>
+                <input type="text" class="addr" placeholder="Address">
+                <br><br>
+                <label for="sex">Sex: </label>
+                <select class="sexSelect">
+                    <option value="choose">Choose your sex</option>
+                    <option value="male">Male</option>
+                    <option value="fmale">Female</option>
+                </select>
+                <br><br>
+                <label for="sal">Salary: </label>
+                <input type="number" class="sal" placeholder="Salary">
+                <br><br>
+                <label for="SprSSN">Supervisor: </label>
+                <input type="number" class="SprSSN" placeholder="Supervisor SSN"><br><br>
+                <label for="dnum">Department: </label>
+                <input type="number" class="dnum" placeholder="Department Number"><br><br>
+            </form>   
+            <button class="submit" onclick="toggle()">Submit</button>         
+        </div>
+
+        <div class="departmentTable">
+            <button class="closeButton" onclick="toggle_dep()">close</button>
+            <form>
+                <label for="dep_Dname">Department Name: </label>
+                <input type="text" class="Dname" placeholder="Department Name">
+                <br><br>
+                <label for="dep_dnum">Department: </label>
+                <input type="number" class="dnum" placeholder="Department Number">
+                <br><br>
+                <label for="mrgSSN">Manager: </label>
+                <input type="number" class="mgrSSN" placeholder="Manager SSN">
+                <br><br>
+                <label for="mdate">Start Date </label>
+                <input type="date" class="Bdate"><br><br>
+            </form>        
+            <button class="dep-submit" onclick="toggle_dep()">Submit</button>    
+        </div>
+
+        <div class="locationTable">
+            <button class="closeButton" onclick="toggle_loc()">close</button>
+            <form>
+                <label for="l_dnum">Department: </label>
+                <input type="number" class="l_dnum" placeholder="Department Number">
+                <br><br>
+                <label for="l_dloc">Location </label>
+                <input type="text" class="l_dloc" placeholder="Location"><br><br>
+            </form>  
+            <button class="loc-submit" onclick="toggle_loc()">Submit</button>          
+        </div>
+        
+        <div class="worksTable">
+            <button class="closeButton" onclick="toggle_work()">close</button>
+            <form>
+                <label for="w_essn">ESSN: </label>
+                <input type="number" class="w_essn" placeholder="ESSN">
+                <br><br>
+                <label for="w_pnum">Project: </label>
+                <input type="number" class="w_pnum" placeholder="Project Number">
+                <br><br>
+                <label for="w_hrs">Hours: </label>
+                <input type="number" class="w_hrs" placeholder="Hours"><br><br>
+            </form>  
+            <button class="work-submit" onclick="toggle_work()">Submit</button>          
+        </div>
+
+        <div class="projectTable">
+            <button class="closeButton" onclick="toggle_proj()">close</button>
+            <form>
+                <label for="proj_Pname">Project Name: </label>
+                <input type="text" class="proj_Pname" placeholder="Project Name">
+                <br><br>
+                <label for="proj_Pnum">Project: </label>
+                <input type="number" class="proj_Pnum" placeholder="Project Number">
+                <br><br>
+                <label for="proj_Ploc">Location: </label>
+                <input type="text" class="proj_Ploc" placeholder="Project Location">
+                <br><br>
+                <label for="proj-Dnum">Department: </label>
+                <input type="date" class="proj-Dnum" placeholder="Department Number"><br><br>
+            </form>  
+            <button class="proj-submit" onclick="toggle_proj()">Submit</button>          
+        </div>
+
+        <div class="dependentTable">
+            <button class="closeButton" onclick="toggle_depen()">close</button>
+            <form>
+                <label for="depen_ESSN">ESSN: </label>
+                <input type="number" class="depen_ESSN" placeholder="ESSN">
+                <br><br>
+                <label for="depen_dname">Department Name: </label>
+                <input type="text" class="depen_dname" placeholder="Department Name">
+                <br><br>
+                <label for="depen_sex">Sex: </label>
+                <select class="depen_sexSelect">
+                    <option value="choose">Choose your sex</option>
+                    <option value="male">Male</option>
+                    <option value="fmale">Female</option>
+                </select>
+                <br><br>
+                <label for="depen-bdate">DOB: </label>
+                <input type="date" class="depen-bdate" placeholder="DOB">
+                <br><br>
+                <label for="depen-rel">Relationship: </label>
+                <input type="text" class="depen-rel" placeholder="Relationship"><br><br>
+            </form>    
+            <button class="depen-submit" onclick="toggle_depen()">Submit</button>        
+        </div>
+
+        <script src="script.js"/>
+    </body>
+</html>
